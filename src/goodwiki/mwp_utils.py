@@ -6,12 +6,12 @@ from goodwiki.constants import parser_functions
 # Filters for magic words that are parser instructions -- e.g., __NOTOC__
 RE_RM_MAGIC = re.compile("__[A-Z]*__", flags=re.UNICODE)
 # Filters for file/image links.
-_media_prefixes = "|".join(["File", "Image", "Media"])
+_media_prefixes = "|".join(["Fájl", "Kép", "Média"])
 RE_RM_WIKILINK = re.compile(
     f"^(?:{_media_prefixes}):", flags=re.IGNORECASE | re.UNICODE
 )
 # Leave category links in-place but remove the category prefixes
-_cat_prefixes = "|".join(["Category"])
+_cat_prefixes = "|".join(["Kategória"])
 RE_CLEAN_WIKILINK = re.compile(
     f"^(?:{_cat_prefixes}):", flags=re.IGNORECASE | re.UNICODE
 )

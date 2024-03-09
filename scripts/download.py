@@ -27,7 +27,7 @@ def get_articles(client: GoodwikiClient) -> list[tuple[str, str]]:
     # if there are duplicates, featured articles supersede good articles when
     # labeling as the former is a greater signal of quality
     # See https://stackoverflow.com/questions/52429406/python-union-of-set-of-tuples
-    categories = [("Category:Good_articles", "g"), ("Category:Featured_articles", "f")]
+    categories = [("Kategória:Kiemelt_cikkek", "g"), ("Category:Featured_articles", "f")]
     acc = dict()
     for c in categories:
         articles = client.get_category_pages(c[0])

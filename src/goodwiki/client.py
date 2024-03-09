@@ -57,7 +57,7 @@ class WikiPage:
     unsupported_templates: Counter[str]
 
 
-WIKI_API_ROOT = "https://en.wikipedia.org/w/api.php"
+WIKI_API_ROOT = "https://hu.wikipedia.org/w/api.php"
 
 
 class GoodwikiClient:
@@ -77,7 +77,7 @@ class GoodwikiClient:
         Returns:
             list of page titles associated with given category.
         """
-        wikiapi = Wikipedia(self.user_agent, "en")
+        wikiapi = Wikipedia(self.user_agent, "hu")
         cat = wikiapi.page(category)
         # 0 namespace is normal articles on wikipedia (non-category, etc.)
         return [c.title for c in cat.categorymembers.values() if c.namespace == 0]
@@ -115,7 +115,7 @@ class GoodwikiClient:
         return WikiPage(
             pageid=pageid,
             title=unicodedata.normalize("NFKC", title),
-            lang="en",
+            lang="hu",
             revid=revid,
             categories=sorted(preprocessed.categories),
             description=preprocessed.description,

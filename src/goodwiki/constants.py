@@ -1,26 +1,31 @@
 removed_sections = {
     "references",
     "works cited",
-    "bibliography",
-    "further reading",
-    "published works",
-    "external links",
-    "notes",
-    "notes and references",
-    "further reading",
-    "external links",
-    "literature cited",
-    "sources",
-    "citations",
-    "sources and further reading",
-    "footnotes",
-    "sources cited",
+    "bibliográfia",
+    "fordítás"
+    "műfordításai",
+    "további információk",
+    "művei",
+    "jegyzetek",
+    "források és jegyzetek",
+    "kapcsolódó szócikkek",
+    "külső hivatkozások",
+    "hivatkozott irodalom",
+    "források",
+    "hivatkozások",
+    "lásd még",
+    "irodalom",
+    "megjegyzések",
+    "megjegyzés",
+    "hivatkozott források",
 }
 
 # Some templates are really large sections of the page and
 # should be removed before continuing preprocessing to minimize
 # processing error. Use startswith for detection
 big_templates_to_remove = {
+    "bélyegkép",
+    "fájl",
     "football",
     "fs ",  # shorthand for football squad
     "quote box",
